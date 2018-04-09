@@ -1,0 +1,86 @@
+<div class="heading">
+		<h3>Contact Form</h3>
+</div>
+<hr class="hrule">
+<!-- MAIN CONTACT FORM APP -->
+<div class="container">
+	<div class="jumbotron">
+		<div class="row">
+			<div class="col-md-8">
+				<form name="addEditContact" method="get">
+				<div class="row">
+					<div class="col-md-3">
+						<label class="control-label pull-right">First Name:</label>
+					</div>
+					<div class="col-md-9">
+						<input type="text" name="fname" ng-model="newcontact.fname" placeholder="Enter the First Name" style="width:100%">
+					</div>
+				</div> 
+				<div class="row betweenRow">
+					<div class="col-md-3">
+						<label class="control-label pull-right"> Last Name:</label>
+					</div>
+					<div class="col-md-9">
+						<input type="text" name="lname" ng-model="newcontact.lname" placeholder="Enter the First Name" style="width:100%">
+					</div>
+				</div>
+				<div class="row betweenRow">
+					<div class="col-md-3">
+						<label class="control-label pull-right"> Email</label>
+					</div>
+					<div class="col-md-9">
+						<i class="fa fa-plus-circle fa-2x pull-right" aria-hidden="true"></i>
+					</div>
+				</div>
+				<div class="row betweenRow"><div class="col-md-12"><hr class="hrule"></div></div>
+		
+				<div id="emailArea">
+					<div class="row betweenRow">
+						<div class="col-md-3">
+							<select class="pull-right" >
+								<option>Work</option>
+								<option>Personal</option>
+							</select>
+						</div>
+						<div class="col-md-8">
+							<input type="email"  name="emailWork" ng-model="newcontact.email[0].work" style="width:100%">
+						</div>
+						<div class="col-md-1">
+							<i class="fa fa-minus-circle fa-2x pull-right" aria-hidden="true"></i>
+						</div>
+					</div>
+				</div>
+				<div class="row betweenRow">
+					<div class="col-md-3">
+						<label class="control-label pull-right"> Phone:</label>
+					</div>
+					<div class="col-md-9">
+						<i class="fa fa-plus-circle fa-2x pull-right" aria-hidden="true"></i>
+					</div> 
+				</div>
+
+				<div class="row betweenRow" ><div class="col-md-12"><hr class="hrule"></div></div>
+
+			<div id="numberArea">
+				<div class="row betweenRow">
+					<div class="col-md-3">
+						<select class="pull-right">
+							<option>Work</option>
+							<option>Personal</option>
+						</select>
+					</div>
+					<div class="col-md-8">
+						<input type="text" name="phWork" ng-model="newcontact.phone[0].work" style="width:100%">
+					</div>
+					<div class="col-md-1">
+						<i class="fa fa-minus-circle fa-2x pull-right" aria-hidden="true"></i>
+					</div>
+				</div>
+				</form>
+			</div>	<div class="row betweenRow">
+			<div class="col-md-10"><button type="button" class="btn btn-default pull-right" value="Save" ng-click="saveContact(newcontact)">Save</button></div>
+			<div class="col-md-2"><a  ui-sref="home"><button type="button" class="btn btn-default pull-right">Cancel</button></a></div>
+		</div>
+		</div>
+	</div>
+</div>

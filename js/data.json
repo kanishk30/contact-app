@@ -1,0 +1,28 @@
+[
+        {"id": 1,
+                "name": "Praneta",
+                "emailId": [{"work": "praneta@gmail.com"},
+                        {"personal": "praneta@yahoo.com"
+                        }],
+                "contactNumber": [
+                        {"work": "9879879879"},
+                        {"personal": "7897897897"}]},
+
+        {"id": 2,
+                "name": "Chaitanya",
+                "emailId": [{"work": "chaitanya@gmail.com"},
+                        {"personal": "chaitanya@yahoo.com"
+                        }],
+                "contactNumber": [{"work": "4564564564"},
+                        {"personal": "6546546544"}]
+        },
+
+        {"id": 3,
+                "name": "Vatsal",
+                "emailId": [{"work": "vatsal@gmail.com"},
+                        {"personal": "vatsal@yahoo.com"
+                        }],
+                "contactNumber": [{"work": "1231231231"},
+                        {"personal": "3213213212"}]
+        }
+]

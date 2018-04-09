@@ -1,0 +1,85 @@
+
+<div class="heading">
+		<h3>Contact List</h3>
+</div>
+<hr class="hrule">
+<!-- CONTACT FILTER -->
+<div>
+    Quick Find Contacts :
+    <input type="text" name="findContact" ng-model="findContact" placeholder="Type Here">
+    
+        <a class="btn btn-default" style="float: right" ui-sref="contact">
+            Add Contact </a>
+</div>
+<!-- CONTACT FILTER ENDS -->
+<!-- CONTACT DISPLAY -->
+<div id="content">
+    <table class="table table-bordered">
+        <tr>
+            <th>#</th>
+            <th>Name</th> 
+            <th>Email Address</th>
+            <th>Contact No</th>
+        </tr>
+        <tr ng-repeat="contact in contacts | filter:findContact">
+            <td>{{contact.id}}</td>
+            <td>{{contact.fname}} {{contact.lname}} </td>
+
+            <td>
+                <table>
+                    <tr>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td align="right">Work:</td><td>{{contact.email[0].work}}</td>
+                                </tr>
+                                <tr>
+                                    <td>Personal:</td><td>{{contact.email[0].personal}}</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+
+            <td>
+                <table>
+                    <tr>
+                         <td>
+                                <table>
+                                        <tr>
+                                            <td align = "right">Work:</td><td>{{contact.phone[0].work}}</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Personal:</td><td>{{contact.phone[0].personal}}</td>
+                                        </tr>
+                                </table>
+                        </td>
+                </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+<!-- CONTACT DISPLAY ENDS -->
+<!-- FOR PAGINATION -->
+<nav id="page-selection">
+    <ul class="pager">
+        <li>
+            <a href="">Prev</a>
+        </li>
+        <li>
+            <a href="">1</a>
+        </li>
+        <li>
+            <a href="">2</a>
+        </li>
+        <li>
+            <a href="">3</a>
+        </li>
+        <li>
+            <a href="">Next</a>
+        </li>
+    </ul>
+</nav>
+<!-- END OF THE APP -->
